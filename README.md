@@ -1,2 +1,1 @@
-# thrive
-Thrive community website
+### Thrive
