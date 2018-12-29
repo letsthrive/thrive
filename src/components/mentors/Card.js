@@ -24,7 +24,7 @@ const styles = theme => ({
   card: {
     marginTop: -100,
     paddingTop: 100,
-    height: 250,
+    height: 340,
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
