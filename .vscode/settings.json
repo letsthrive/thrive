@@ -1,12 +1,11 @@
 {
-  // Enable automatic file formatting and fixing
-  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.rulers": [
+    100
+  ],
+  "editor.formatOnSave": false,
   "eslint.autoFixOnSave": true,
-
-  // Using Prettier for JS is unnecessary as ESLint already handles formatting
-  "prettier.disableLanguages": ["javascript", "javascriptreact"],
-
-  // Disable built-in tools for which there are better alternatives available
-  "javascript.format.enable": false,
-  "javascript.validate.enable": false
+  "editor.showFoldingControls": "always",
+  "editor.folding": true,
+  "editor.foldingStrategy": "indentation",
 }
