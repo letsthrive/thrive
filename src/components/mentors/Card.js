@@ -65,7 +65,7 @@ const MentorCard = ({ name, profilePicture, about, types, classes }) => {
     />
   )
   return (
-    <Grid item xs={3}>
+    <Grid item xs={12} sm={6} md={3}>
       <div className={classes.wrapper}>
         {profilePicture === '' ? renderAvatarWords : renderAvatarPicture}
         <Card className={classes.card} raised elevation={4} square>
