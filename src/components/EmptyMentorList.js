@@ -17,7 +17,7 @@ const EmptyMentorList = ({ type, classes }) => (
   <Grid item xs={12}>
     <Paper className={classes.section}>
       <Typography variant="h3" gutterBottom>Sorry :(</Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography paragraph>
         We are new here and constantly trying to add mentees to our community. We have to make sure
         the mentees we are adding are kind and helpful. Folks who can actually help you up your game
         in the industry. Check us out again in a couple of days, we might have added the mentor that
