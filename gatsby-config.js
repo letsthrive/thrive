@@ -21,10 +21,10 @@ module.exports = {
         name: `lets-thrive`,
         short_name: `thrive`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `lets-thrive`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#f50057`,
+        theme_color: `#f50057`,
+        display: `standalone`,
+        icon: `src/images/favicon-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
