@@ -38,6 +38,23 @@ export default [
     ],
   },
   {
+    name: 'Ali Ahsan',
+    profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-9/41654856_10215285428001910_373663657990553600_n.jpg?_nc_cat=105&_nc_ht=scontent.flhe7-1.fna&oh=19d418f99e9313c1d8f3f00d95fcb645&oe=5C8FA141',
+    designation: 'Head Of Product Development @ Kuks',
+    about: `
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+    `,
+    types: [
+      TYPE.ENTREPRENEUR,
+    ],
+    bio: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
+    ],
+  },
+  {
     name: 'Sakhi Mansoor',
     profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-9/48390432_2206216339409799_5015117506335997952_n.jpg?_nc_cat=109&_nc_ht=scontent.flhe7-1.fna&oh=fd9cb650910ccec3513bdf41c032bcbb&oe=5CC96788',
     designation: 'Javascript Rockstar @ Venturedive',
