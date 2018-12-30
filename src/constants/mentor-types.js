@@ -6,7 +6,8 @@ const mentorTypes = {
   QUALITY_ASSURANCE: 'quality assurance',
   BUSINESS_ANALYST: 'business analyst',
   ENTREPRENEUR: 'entrepreneur',
-  ANDROID_DEVELOPER: 'android',
+  ANDROID_DEVELOPER: 'android developer',
+  IOS_DEVELOPER: 'ios developer',
   SOLUTIONS_ARCHITECT: 'solutions architect',
 }
 
