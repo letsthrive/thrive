@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `lets-thrive`,
+        name: `Thrive`,
         short_name: `thrive`,
         start_url: `/`,
         background_color: `#f50057`,
