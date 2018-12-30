@@ -25,6 +25,14 @@ const Header = ({ siteTitle, classes }) => (
       </Typography>
       <Button component={Link} to="/" color="inherit">Home</Button>
       <Button component={Link} to="/mentors" color="inherit">Find Mentor</Button>
+      <Button 
+        component="a" 
+        href="https://github.com/letsthrive/thrive-ama/issues"
+        target="_blank"
+        color="inherit"
+      >
+        Forum
+      </Button>
     </Toolbar>
   </AppBar>
 )
