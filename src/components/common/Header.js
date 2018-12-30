@@ -27,7 +27,7 @@ const Header = ({ siteTitle, classes }) => (
       <Button component={Link} to="/mentors" color="inherit">Find Mentor</Button>
       <Button 
         component="a" 
-        href="https://github.com/letsthrive/thrive-ama/issues"
+        href="https://github.com/letsthrive/thrive-ama"
         target="_blank"
         color="inherit"
       >
