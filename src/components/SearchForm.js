@@ -1,11 +1,12 @@
 import React from 'react';
 // material-ui
 import { withStyles } from '@material-ui/core/styles';
-
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+// images
+import homeImage from '../images/home-bg.jpg';
 
 const styles = theme => ({
   sectionSearch: {
@@ -16,7 +17,7 @@ const styles = theme => ({
     flexWrap: 'wrap',
     padding: theme.spacing.unit * 3,
     marginBottom: theme.spacing.unit * 2,
-    backgroundImage: `url("https://images.unsplash.com/photo-1546014216-0ffcd51e2b6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")`,
+    backgroundImage: `url("${homeImage}")`,
     backgroundAttachment: 'fixed',
     backgroundPosition: '50%',
     backgroundRepeat: 'no-repeat',
