@@ -1,4 +1,4 @@
-export default {
+const mentorTypes = {
   FRONTEND_DEVELOPER: 'frontend developer',
   BACKEND_DEVELOPER: 'backend developer',
   FULLSTACK_DEVELOPER: 'fullstack developer',
@@ -9,3 +9,15 @@ export default {
   ANDROID_DEVELOPER: 'android',
   SOLUTIONS_ARCHITECT: 'solutions architect',
 }
+
+export const isValueInList = (list, value) => {
+  return list.includes(getKeyFromValue(value));
+}
+
+export const getKeyFromValue = (value) => {
+  return Object.keys(mentorTypes).find(key => {
+    return mentorTypes[key] === value;
+  })
+}
+
+export default mentorTypes;

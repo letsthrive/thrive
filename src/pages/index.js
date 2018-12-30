@@ -2,16 +2,15 @@ import React from 'react';
 import { navigate } from "gatsby"
 // material-ui
 import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 // components
 import Layout from '../components/layout/Layout';
 import SEO from '../components/Seo';
 import SearchForm from '../components/SearchForm';
 // constants
 import mentorTypes from '../constants/mentor-types';
-
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   section: {

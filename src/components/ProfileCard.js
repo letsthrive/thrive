@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// material-ui
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -13,7 +14,9 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 // utils
-import { getRandomColor } from '../utils'
+import { getRandomColor, getFirstLetterOfWords } from '../utils';
+// constants
+import { isValueInList } from '../constants/mentor-types';
 
 const styles = theme => ({
   wrapper: {
@@ -48,13 +51,13 @@ const styles = theme => ({
   },
 });
 
-const MentorCard = ({ name, profilePicture, about, types, classes }) => {
+const MentorCard = ({ name, profilePicture, about, types, selectedList, classes }) => {
   const renderAvatarWords = (
     <Avatar 
       className={classes.profilePicture} 
       style={{ backgroundColor: getRandomColor() }}
     >
-      {name.match(/[A-Z]/g).join('')}
+      {getFirstLetterOfWords(name)}
     </Avatar>
   );
   const renderAvatarPicture = (
@@ -75,9 +78,9 @@ const MentorCard = ({ name, profilePicture, about, types, classes }) => {
               <Chip 
                 key={index} 
                 className={classes.chip} 
-                color="primary" 
+                color="secondary" 
                 label={type} 
-                variant="outlined" 
+                variant={isValueInList(selectedList, type) ? "filled" : "outlined"} 
               />
             ))}
           </CardContent>
