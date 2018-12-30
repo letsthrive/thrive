@@ -11,8 +11,6 @@ import Typography from '@material-ui/core/Typography';
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    marginBottom: theme.spacing.unit * 2,
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
   },
   grow: {
     flexGrow: 1,
@@ -20,7 +18,7 @@ const styles = theme => ({
 });
 
 const Header = ({ siteTitle, classes }) => (
-  <AppBar position="static" color="default" className={classes.root}>
+  <AppBar position="static" color="secondary" className={classes.root}>
     <Toolbar>
       <Typography variant="h6" color="inherit" className={classes.grow}>
         {siteTitle}

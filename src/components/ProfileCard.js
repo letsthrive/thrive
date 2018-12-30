@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 // utils
-import getRandomColor from './utils/getRandomColor'
+import { getRandomColor } from '../utils'
 
 const styles = theme => ({
   wrapper: {

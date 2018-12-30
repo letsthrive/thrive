@@ -12,8 +12,8 @@ import '../../styles/main.css'
 
 const styles = theme => ({
   body: {
-    padding: 8,
-    backgroundColor: '#fff',
+    padding: 24,
+    backgroundColor: '#F1F1F1',
   },
 });
 

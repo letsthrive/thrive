@@ -9,12 +9,17 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 5,
     marginBottom: theme.spacing.unit * 2,
   },
+  heart: {
+    color: theme.palette.secondary.main,
+  },
 });
 
 const Footer = ({ classes }) => (
   <footer className={classes.wrapper}>
     <Typography variant="body1" align="center">
-      © 2018, Developed With <span role="img" aria-label="love">♥️</span> By Adeel Imran.
+      © 2018, Developed With 
+      <span role="img" aria-label="love" className={classes.heart}> ♥️ </span> 
+      By Adeel Imran.
     </Typography>
   </footer>
 );

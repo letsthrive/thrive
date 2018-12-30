@@ -5,33 +5,34 @@ import { withStyles } from '@material-ui/core/styles';
 // components
 import Layout from '../components/layout/Layout';
 import SEO from '../components/Seo';
+import SearchForm from '../components/SearchForm';
+// constants
+import mentorTypes from '../constants/mentor-types';
 
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Input from '@material-ui/core/Input';
-import MenuItem from '@material-ui/core/MenuItem';
 
 const styles = theme => ({
   section: {
     padding: theme.spacing.unit * 2,
   },
-  formControl: {
-    width: '100%',
-  },
 });
 
 class IndexPage extends React.Component {
-  onHandleChangeMenteeType = event => {
-    navigate(`/mentors?type=${event.target.value}`)
+  onHandleChangeMenteeType = ({ target }) => {
+    const { value } = target;
+    if (value === '') {
+      return;
+    }
+    navigate(`/mentors?type=${value}`)
   };
   render() {
     const { classes } = this.props;
     return (
       <Layout>
         <SEO title="Home" keywords={[`thrive`, `mentee`, `find tech mentor`]} />
+        <SearchForm mentors={mentorTypes} onChange={this.onHandleChangeMenteeType} />
         <Grid container spacing={24}>
           <Grid item xs={12} sm={12} md={6}>
             <Paper className={classes.section}>
@@ -60,31 +61,6 @@ class IndexPage extends React.Component {
                 What Thrive aims to accomplish is as a community let's help each other out to
                 become their best versions. Only then can we survive & become "world changers".
               </Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={12} md={12}>
-            <Paper className={classes.section}>
-              <Typography component="h2" variant="h3" gutterBottom>Find A Mentor</Typography>
-              <form autoComplete="off">
-                <FormControl className={classes.formControl}>
-                  <Select 
-                    value={''} 
-                    displayEmpty
-                    onChange={this.onHandleChangeMenteeType} 
-                    input={<Input name="menteeType" id="menteeType" />} 
-                  >
-                    <MenuItem value="">
-                      <em>Select A Mentee Type</em>
-                    </MenuItem>
-                    <MenuItem value="fed">Frontend Developer</MenuItem>
-                    <MenuItem value="bed">Backend Developer</MenuItem>
-                    <MenuItem value="fsd">Fullstack Developer</MenuItem>
-                    <MenuItem value="ba">Business Analyst</MenuItem>
-                    <MenuItem value="qa">Quality Assurance</MenuItem>
-                    <MenuItem value="e">Entrepreneur</MenuItem>
-                  </Select>
-                </FormControl>
-              </form>
             </Paper>
           </Grid>
         </Grid>
