@@ -9,7 +9,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
 // material icons
 import DoneIcon from '@material-ui/icons/Done';
-import CancelIcon from '@material-ui/icons/Cancel';
 // components
 import Layout from '../components/layout/Layout';
 import SEO from '../components/Seo';
@@ -49,15 +48,17 @@ class MentorsPage extends React.Component {
   }
 
   onSelectChip = selectedKey => () => {
+    const { selectedList } = this.state;
+    if (selectedList.includes(selectedKey)) {
+      // if key exists, remove from list
+      const updatedList = selectedList.filter(item => item !== selectedKey);
+      this.setState({ selectedList:  updatedList });
+      return;
+    }
+    // if new key, add to list
     this.setState(prevState => ({ 
       selectedList:  [selectedKey, ...prevState.selectedList],
     }));
-  };
-
-  onRemoveChip = selectedKey => () => {
-    const { selectedList } = this.state;
-    const updatedList = selectedList.filter(item => item !== selectedKey);
-    this.setState({ selectedList:  updatedList });
   };
 
   onGetMentorList = () => {
@@ -75,7 +76,6 @@ class MentorsPage extends React.Component {
   render() {
     const { classes } = this.props;
     const { selectedList } = this.state;
-    console.log('####', this.onGetMentorList())
     return (
       <Layout>
         <SEO title="Mentors" keywords={[`thrive`, `mentee`, `find tech mentor`]} />
@@ -84,14 +84,16 @@ class MentorsPage extends React.Component {
           {Object.entries(mentorTypes).map(([key, value]) => (
             <Chip
               key={key}
-              avatar={<Avatar>{getFirstLetterOfWords(value)}</Avatar>}
+              avatar={(
+                <Avatar>
+                  {selectedList.includes(key) ? <DoneIcon /> : getFirstLetterOfWords(value)}
+                </Avatar>
+              )}
               label={value}
               clickable
               className={classes.chip}
               color={selectedList.includes(key) ? 'secondary': 'default'}
               onClick={this.onSelectChip(key)}
-              onDelete={this.onRemoveChip(key)}
-              deleteIcon={selectedList.includes(key) ? <CancelIcon /> : <DoneIcon />}
             />
           ))}
         </Paper>
