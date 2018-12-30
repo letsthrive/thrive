@@ -14,6 +14,7 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/Seo';
 import ProfileCard from '../components/ProfileCard';
+import EmptyMentorList from '../components/EmptyMentorList';
 // list
 import mentorTypes, { getKeyFromValue } from '../constants/mentor-types';
 import mentorList from '../constants/mentors-list';
@@ -74,6 +75,7 @@ class MentorsPage extends React.Component {
   render() {
     const { classes } = this.props;
     const { selectedList } = this.state;
+    console.log('####', this.onGetMentorList())
     return (
       <Layout>
         <SEO title="Mentors" keywords={[`thrive`, `mentee`, `find tech mentor`]} />
@@ -97,8 +99,9 @@ class MentorsPage extends React.Component {
           <Typography variant="h3" gutterBottom>Mentors</Typography>
           <Typography variant="body1" gutterBottom>
             Disclaimer: Before reaching out to a maintainer please ensure that you have gone through
-            our ask-me-anything forum. If you feel that the given answers do not solve your usecase.
-            Reach any of the below mentors out.
+            our <a href="https://github.com/letsthrive/thrive-ama" target="_blank" rel="noopener noreferrer">ask-me-anything forum</a>. 
+            If you feel that the given answers do not solve your usecase. Reach any of the below 
+            mentors out.
           </Typography>
           <Typography variant="body1" gutterBottom>
             A side note, avoid spamming the mentees or sending the same email to all the mentees in
@@ -106,6 +109,7 @@ class MentorsPage extends React.Component {
           </Typography>
         </Paper>
         <Grid container spacing={24}>
+          {this.onGetMentorList().length === 0 && <EmptyMentorList />}
           {this.onGetMentorList().map((mentor, index) => (
             <ProfileCard 
               key={index}
@@ -120,7 +124,7 @@ class MentorsPage extends React.Component {
 }
 
 MentorsPage.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired, // material-ui injected
 };
 
 export default withStyles(styles)(MentorsPage);
