@@ -56,8 +56,8 @@ class MentorsPage extends React.Component {
       return;
     }
     // if new key, add to list
-    this.setState(prevState => ({ 
-      selectedList:  [selectedKey, ...prevState.selectedList],
+    this.setState(state => ({ 
+      selectedList:  [selectedKey, ...state.selectedList],
     }));
   };
 
@@ -98,14 +98,14 @@ class MentorsPage extends React.Component {
           ))}
         </Paper>
         <Paper className={classes.section}>
-          <Typography variant="h3" gutterBottom>Mentors</Typography>
-          <Typography variant="body1" gutterBottom>
-            Disclaimer: Before reaching out to a maintainer please ensure that you have gone through
+          <Typography variant="h3" gutterBottom>Disclaimer</Typography>
+          <Typography paragraph gutterBottom>
+            Before reaching out to a mentee please ensure that you have gone through
             our <a href="https://github.com/letsthrive/thrive-ama" target="_blank" rel="noopener noreferrer">ask-me-anything forum</a>. 
             If you feel that the given answers do not solve your usecase. Reach any of the below 
             mentors out.
           </Typography>
-          <Typography variant="body1" gutterBottom>
+          <Typography paragraph gutterBottom>
             A side note, avoid spamming the mentees or sending the same email to all the mentees in
             the list below and allow them 3-5 days to get back to you.
           </Typography>

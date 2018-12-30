@@ -1,18 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 // material-ui
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
+import Collapse from '@material-ui/core/Collapse';
 // icons
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 // utils
 import { getRandomColor, getFirstLetterOfWords } from '../utils';
 // constants
@@ -27,7 +32,7 @@ const styles = theme => ({
   card: {
     marginTop: -100,
     paddingTop: 100,
-    height: 340,
+    // height: 340,
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
@@ -49,53 +54,110 @@ const styles = theme => ({
   actions: {
     display: 'xflex',
   },
+  expand: {
+    transform: 'rotate(0deg)',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+    marginLeft: 'auto',
+    [theme.breakpoints.up('sm')]: {
+      marginRight: -8,
+    },
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
 });
 
-const MentorCard = ({ name, profilePicture, about, types, selectedList, classes }) => {
-  const renderAvatarWords = (
-    <Avatar 
-      className={classes.profilePicture} 
-      style={{ backgroundColor: getRandomColor() }}
-    >
-      {getFirstLetterOfWords(name)}
-    </Avatar>
-  );
-  const renderAvatarPicture = (
-    <Avatar 
-      alt={name}
-      src={profilePicture}
-      className={classes.profilePicture} 
-    />
-  )
-  return (
-    <Grid item xs={12} sm={6} md={3}>
-      <div className={classes.wrapper}>
-        {profilePicture === '' ? renderAvatarWords : renderAvatarPicture}
-        <Card className={classes.card} raised elevation={4} square>
-          <CardContent className={classes.cardContent}>
-            <Typography component="p" gutterBottom>{about}</Typography>
-            {types.map((type, index) => (
-              <Chip 
-                key={index} 
-                className={classes.chip} 
-                color="secondary" 
-                label={type} 
-                variant={isValueInList(selectedList, type) ? "filled" : "outlined"} 
-              />
-            ))}
-          </CardContent>
-          <CardActions className={classes.actions} disableActionSpacing>
-            <IconButton aria-label="Add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="Share">
-              <ShareIcon />
-            </IconButton>
-          </CardActions>
-        </Card>
-      </div>
-    </Grid>
-  );
+class MentorCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isExpanded: false,
+    };
+  };
+
+  onToggleExpansion = () => {
+    this.setState(state => ({ isExpanded: !state.isExpanded }));
+  };
+
+  render() {
+    const { 
+      name, 
+      profilePicture, 
+      designation, 
+      about, 
+      types, 
+      bio, 
+      selectedList, 
+      classes,
+    } = this.props;
+    const { isExpanded} = this.state;
+
+    const renderAvatarWords = (
+      <Avatar 
+        className={classes.profilePicture} 
+        style={{ backgroundColor: getRandomColor() }}
+      >
+        {getFirstLetterOfWords(name)}
+      </Avatar>
+    );
+    const renderAvatarPicture = (
+      <Avatar 
+        alt={name}
+        src={profilePicture}
+        className={classes.profilePicture} 
+      />
+    )
+    return (
+      <Grid item xs={12} sm={6} md={3}>
+        <div className={classes.wrapper}>
+          {profilePicture === '' ? renderAvatarWords : renderAvatarPicture}
+          <Card className={classes.card} raised elevation={4} square>
+            <CardHeader title={name} subheader={designation} />
+            <CardContent className={classes.cardContent}>
+              <Typography paragraph>{about}</Typography>
+              {types.map((type, index) => (
+                <Chip 
+                  key={index} 
+                  className={classes.chip} 
+                  color="secondary" 
+                  label={type} 
+                  variant={isValueInList(selectedList, type) ? "filled" : "outlined"} 
+                />
+              ))}
+            </CardContent>
+            <CardActions className={classes.actions} disableActionSpacing>
+              <IconButton aria-label="Add to favorites">
+                <FavoriteIcon />
+              </IconButton>
+              <IconButton aria-label="Share">
+                <ShareIcon />
+              </IconButton>
+              <IconButton
+                className={classnames(classes.expand, { [classes.expandOpen]: isExpanded })}
+                onClick={this.onToggleExpansion}
+                aria-expanded={isExpanded}
+                aria-label="Show more"
+              >
+                <ExpandMoreIcon />
+              </IconButton>
+            </CardActions>
+            <Collapse in={isExpanded} timeout="auto" unmountOnExit>
+              <CardContent>
+                <Typography paragraph>Bio:</Typography>
+                {bio.map((paragraph, index) => (
+                  <Typography key={index} paragraph>
+                    {paragraph}
+                  </Typography>
+                ))}
+              </CardContent>
+            </Collapse>
+          </Card>
+        </div>
+      </Grid>
+    );
+  }
 }
 
 MentorCard.propTypes = {
