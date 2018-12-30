@@ -52,7 +52,7 @@ class IndexPage extends React.Component {
             <Paper className={classes.section}>
               <Typography variant="h2" gutterBottom>Mission</Typography>
               <Typography variant="body1" gutterBottom>
-                As Albus Dumbledore, once said "Help will always be given at Hogwarts to those 
+                As Professor Snape, once said "Help will always be given at Hogwarts to those 
                 who ask for it.". Now this isn't Hogwarts, but <strong>thrive</strong> tends to
                 have the same inspirations.
               </Typography>
