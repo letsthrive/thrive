@@ -18,8 +18,8 @@ const EmptyMentorList = ({ type, classes }) => (
     <Paper className={classes.section}>
       <Typography variant="h3" gutterBottom>Sorry :(</Typography>
       <Typography paragraph>
-        We are new here and constantly trying to add mentees to our community. We have to make sure
-        the mentees we are adding are kind and helpful. Folks who can actually help you up your game
+        We are new here and constantly trying to add mentors to our community. We have to make sure
+        the mentors we are adding are kind and helpful. Folks who can actually help you up your game
         in the industry. Check us out again in a couple of days, we might have added the mentor that
         you were looking for. You can always reach out to  <a href="https://twitter.com/adeelibr" target="_blank" rel="noopener noreferrer">Adeel</a> at 
         twitter. To share your experience or give feedback. 

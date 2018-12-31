@@ -98,7 +98,7 @@ class MentorsPage extends React.Component {
     );
     return (
       <Layout>
-        <SEO title="Mentors" keywords={[`thrive`, `mentee`, `find tech mentor`]} />
+        <SEO title="Mentors" keywords={[`thrive`, `mentor`, `find tech mentor`]} />
         <Grid container spacing={24}>
           <Grid item md={6}>
             <Paper className={classes.section}>
@@ -124,14 +124,14 @@ class MentorsPage extends React.Component {
             <Paper className={classes.section}>
               <Typography variant="h3" gutterBottom>Disclaimer</Typography>
               <Typography paragraph gutterBottom>
-                Before reaching out to a mentee please ensure that you have gone through
+                Before reaching out to a mentor please ensure that you have gone through
                 our {forumLink}. 
                 If you feel that the given answers do not solve your usecase. Reach any of the below 
                 mentors out.
               </Typography>
               <Typography paragraph gutterBottom>
-                A side note, <span className={classes.emphasisText}>avoid spamming the mentees by
-                sending the same email to all the mentees</span> in the list below and allow 
+                A side note, <span className={classes.emphasisText}>avoid spamming the mentors by
+                sending the same email to all the mentors</span> in the list below and allow 
                 them 4-7 days to get back to you.
               </Typography>
             </Paper>

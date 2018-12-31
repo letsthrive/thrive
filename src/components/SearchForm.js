@@ -63,7 +63,7 @@ const SearchForm = ({ mentors, onChange, classes }) => {
             }}
           >
             <MenuItem key="empty" value="">
-              <em>Select A Mentee Type</em>
+              <em>Select A Mentor Type</em>
             </MenuItem>
             {Object.entries(mentors).map(([key, value]) => (
               <MenuItem key={key} className={classes.menuItem} value={key}>{value}</MenuItem>

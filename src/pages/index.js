@@ -19,7 +19,7 @@ const styles = theme => ({
 });
 
 class IndexPage extends React.Component {
-  onHandleChangeMenteeType = ({ target }) => {
+  onHandleChangeMentorType = ({ target }) => {
     const { value } = target;
     if (value === '') {
       return;
@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home" keywords={[`thrive`, `mentee`, `find tech mentor`]} />
-        <SearchForm mentors={mentorTypes} onChange={this.onHandleChangeMenteeType} />
+        <SearchForm mentors={mentorTypes} onChange={this.onHandleChangeMentorType} />
         <Grid container spacing={24}>
           <Grid item xs={12} sm={12} md={6}>
             <Paper className={classes.section}>

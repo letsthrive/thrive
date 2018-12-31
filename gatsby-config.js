@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Thrive`,
-    description: `An open initiative to help find grads/undergrads or people stuck in their dead end jobs. Mentees giving direction to people.`,
+    description: `An open initiative to help find grads/undergrads or people stuck in their dead end jobs. Mentors giving direction to people.`,
     author: `@adeelibr`,
   },
   plugins: [
