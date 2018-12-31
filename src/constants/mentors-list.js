@@ -99,7 +99,7 @@ export default [
       I am accountable for delivering business results. I love building great products 
       that address user needs and solve critical business problems.
     `,
-    types: [TYPE.FRONTEND_DEVELOPER],
+    types: [TYPE.FULLSTACK_DEVELOPER],
     linkedin: "https://www.linkedin.com/in/shahqaan/",
     email: "shahqaan.qasim+mentoring@gmail.com",
   }),
