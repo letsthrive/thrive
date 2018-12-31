@@ -1,12 +1,12 @@
 import TYPE from './mentor-types';
 
 const makeProfileInfo = ({ 
-  name,
-  profilePicture,
-  designation,
-  about,
-  types,
-  bio,
+  name = '',
+  profilePicture = '',
+  designation = '',
+  about= '',
+  types = [],
+  bio = '',
   linkedin = null,
   twitter = null,
   stackoverflow = null,
