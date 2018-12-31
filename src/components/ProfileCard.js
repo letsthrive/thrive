@@ -14,10 +14,11 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Collapse from '@material-ui/core/Collapse';
 // icons
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+import LinkedinIcon from 'mdi-material-ui/LinkedinBox';
+import TwitterIcon from 'mdi-material-ui/TwitterBox';
+import StackOverflowIcon from 'mdi-material-ui/StackOverflow';
+import EmailIcon from 'mdi-material-ui/Email';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
 // utils
 import { getRandomColor, getFirstLetterOfWords } from '../utils';
 // constants
@@ -52,7 +53,7 @@ const styles = theme => ({
     margin: theme.spacing.unit / 2,
   },
   actions: {
-    display: 'xflex',
+    display: 'flex',
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -88,27 +89,23 @@ class MentorCard extends React.Component {
       designation, 
       about, 
       types, 
-      bio, 
+      bio,
+      social,
       selectedList, 
       classes,
     } = this.props;
     const { isExpanded} = this.state;
 
     const renderAvatarWords = (
-      <Avatar 
-        className={classes.profilePicture} 
-        style={{ backgroundColor: getRandomColor() }}
-      >
+      <Avatar className={classes.profilePicture} style={{ backgroundColor: getRandomColor() }}>
         {getFirstLetterOfWords(name)}
       </Avatar>
     );
+
     const renderAvatarPicture = (
-      <Avatar 
-        alt={name}
-        src={profilePicture}
-        className={classes.profilePicture} 
-      />
-    )
+      <Avatar alt={name} src={profilePicture} className={classes.profilePicture} />
+    );
+
     return (
       <Grid item xs={12} sm={6} md={3}>
         <div className={classes.wrapper}>
@@ -128,12 +125,31 @@ class MentorCard extends React.Component {
               ))}
             </CardContent>
             <CardActions className={classes.actions} disableActionSpacing>
-              <IconButton aria-label="Add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="Share">
-                <ShareIcon />
-              </IconButton>
+              {social.linkedin && (
+                <IconButton component="a" href={social.linkedin} target="_blank" color="secondary">
+                  <LinkedinIcon />
+                </IconButton>
+              )}
+              {social.twitter && (
+                <IconButton component="a" href={social.twitter} target="_blank" color="secondary">
+                  <TwitterIcon />
+                </IconButton>
+              )}
+              {social.stackoverflow && (
+                <IconButton component="a" href={social.stackoverflow} target="_blank" color="secondary">
+                  <StackOverflowIcon />
+                </IconButton>
+              )}
+              {social.email && (
+                <IconButton 
+                  component="a" 
+                  href={`mailto:${social.email}?subject=[Thrive] Mentorship Guidance For {Subject}`}
+                  target="_blank" 
+                  color="secondary"
+                >
+                  <EmailIcon />
+                </IconButton>
+              )}
               <IconButton
                 className={classnames(classes.expand, { [classes.expandOpen]: isExpanded })}
                 onClick={this.onToggleExpansion}
