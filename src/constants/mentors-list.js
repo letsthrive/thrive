@@ -60,7 +60,7 @@ export default [
       & services. I spend most of my time with React & Node.
     `,
     types: [TYPE.FULLSTACK_DEVELOPER],
-    github: "https://www.linkedin.com/in/sakhi-mansoor-742827147/",
+    github: "https://github.com/kentcdodds/ama",
   }),
   makeProfileInfo({
     name: 'Sakhi Mansoor',
