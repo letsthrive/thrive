@@ -11,6 +11,7 @@ const makeProfileInfo = ({
   twitter = null,
   stackoverflow = null,
   email = null,
+  github = null,
 }) => {
   return {
     name,
@@ -24,6 +25,7 @@ const makeProfileInfo = ({
       twitter,
       stackoverflow,
       email,
+      github,
     })
   }
 }
@@ -49,16 +51,15 @@ export default [
     email: "adeelimranr@gmail.com",
   }),
   makeProfileInfo({
-    name: 'Shahqaan Qasim',
-    profilePicture: 'https://media.licdn.com/dms/image/C5603AQFoZvaq3AmUUg/profile-displayphoto-shrink_800_800/0?e=1551916800&v=beta&t=ri8uZEuraB1E3RhXYsbxU3lRHX3NFvBYuQRosLQAcjQ',
-    designation: 'VP of Engineering @ Redbuffer',
+    name: 'Kent C Dodds',
+    profilePicture: 'https://pbs.twimg.com/profile_images/759557613445001216/6M2E1l4q_400x400.jpg',
+    designation: 'Software Engineer @ Paypal',
     about: `
-      I am accountable for delivering business results. I love building great products 
-      that address user needs and solve critical business problems.
+      I help build awesome experiences for the millions of people who use PayPal's products 
+      & services. I spend most of my time with React & Node.
     `,
-    types: [TYPE.FRONTEND_DEVELOPER],
-    linkedin: "https://www.linkedin.com/in/shahqaan/",
-    email: "shahqaan.qasim+mentoring@gmail.com",
+    types: [TYPE.FULLSTACK_DEVELOPER],
+    github: "https://www.linkedin.com/in/sakhi-mansoor-742827147/",
   }),
   makeProfileInfo({
     name: 'Sakhi Mansoor',
@@ -88,5 +89,17 @@ export default [
     linkedin: "https://www.linkedin.com/in/farooq-ahmad-khan/",
     twitter: "https://twitter.com/farooqkhanOO3",
     email: "farooqahmadkhan003@gmail.com",
+  }),
+  makeProfileInfo({
+    name: 'Shahqaan Qasim',
+    profilePicture: 'https://media.licdn.com/dms/image/C5603AQFoZvaq3AmUUg/profile-displayphoto-shrink_800_800/0?e=1551916800&v=beta&t=ri8uZEuraB1E3RhXYsbxU3lRHX3NFvBYuQRosLQAcjQ',
+    designation: 'VP of Engineering @ Redbuffer',
+    about: `
+      I am accountable for delivering business results. I love building great products 
+      that address user needs and solve critical business problems.
+    `,
+    types: [TYPE.FRONTEND_DEVELOPER],
+    linkedin: "https://www.linkedin.com/in/shahqaan/",
+    email: "shahqaan.qasim+mentoring@gmail.com",
   }),
 ];
