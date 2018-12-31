@@ -21,7 +21,7 @@ const styles = theme => ({
 const Footer = ({ classes }) => (
   <footer className={classes.wrapper}>
     <Typography variant="body1" align="center">
-      © 2018, Developed With 
+      © 2019, Developed With 
       <span role="img" aria-label="love" className={classes.heart}> ♥️ </span> 
       By 
     </Typography>
