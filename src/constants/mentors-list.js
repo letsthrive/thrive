@@ -20,41 +20,6 @@ export default [
     ],
   },
   {
-    name: 'Shahqaan Qasim',
-    profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-1/c0.7.240.240a/p240x240/37580874_10160847227310457_617995482647494656_n.jpg?_nc_cat=110&_nc_ht=scontent.flhe7-1.fna&oh=15f9c5f1d05ff4b82a31a11f0a5f076d&oe=5C961289',
-    designation: 'VP @ Redbuffer',
-    about: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-    `,
-    types: [
-      TYPE.FULLSTACK_DEVELOPER,
-      TYPE.ENTREPRENEUR,
-    ],
-    bio: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-    ],
-  },
-  {
-    name: 'Ali Ahsan',
-    profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-9/41654856_10215285428001910_373663657990553600_n.jpg?_nc_cat=105&_nc_ht=scontent.flhe7-1.fna&oh=19d418f99e9313c1d8f3f00d95fcb645&oe=5C8FA141',
-    designation: 'Head Of Product Development @ Kuks',
-    about: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-    `,
-    types: [
-      TYPE.ENTREPRENEUR,
-    ],
-    bio: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-    ],
-  },
-  {
     name: 'Sakhi Mansoor',
     profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-9/48390432_2206216339409799_5015117506335997952_n.jpg?_nc_cat=109&_nc_ht=scontent.flhe7-1.fna&oh=fd9cb650910ccec3513bdf41c032bcbb&oe=5CC96788',
     designation: 'Javascript Rockstar @ Venturedive',
@@ -72,56 +37,18 @@ export default [
     ],
   },
   {
-    name: 'Awais Mazhar Bukhari',
-    profilePicture: '',
-    designation: 'Android Dev @ Mobilelive',
-    about: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-    `,
-    types: [
-      TYPE.ANDROID_DEVELOPER,
-      TYPE.FRONTEND_DEVELOPER,
-    ],
-    bio: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-    ],
-  },
-  {
     name: 'Farooq Khan',
     profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-1/c54.0.240.240a/p240x240/16142236_1328498327193233_3373289347100569465_n.jpg?_nc_cat=103&_nc_ht=scontent.flhe7-1.fna&oh=53e1f2f9305891abcbbefd10785c4ff6&oe=5C98C65D',
     designation: 'Java Dev @ Venturedive',
     about: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+      Hey! I’m computer geek, fun friend and prefer tea over coffee. 
+      Mostly interested in backend related stuff and food
     `,
     types: [
       TYPE.BACKEND_DEVELOPER,
     ],
     bio: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-    ],
-  },
-  {
-    name: 'Mazhar Hassan',
-    profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-9/13245301_894954987299835_4186575535002552216_n.jpg?_nc_cat=104&_nc_ht=scontent.flhe7-1.fna&oh=8d33e3a9009f64a49d6e4b69f412240f&oe=5CD09E65',
-    designation: 'Solutions Architect @ Venturedive',
-    about: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    `,
-    types: [
-      TYPE.BACKEND_DEVELOPER,
-      TYPE.SOLUTIONS_ARCHITECT,
-    ],
-    bio: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi",
+      "I am Farooq, you will mostly find me writing java code and thinking about food. Currently I am doing my masters from LUMS and working as java backend developer @VentureDive. I love to discuss backend architecture and design. I don’t write code to earn or achieve something, I write code because I love to. I do tech blogging and play badminton and table tennis while not writing code.",
     ],
   },
 ];
