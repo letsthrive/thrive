@@ -6,7 +6,7 @@ const makeProfileInfo = ({
   designation = '',
   about= '',
   types = [],
-  bio = '',
+  bio = ["Hasn't added bio data yet"],
   linkedin = null,
   twitter = null,
   stackoverflow = null,
@@ -52,6 +52,20 @@ export default [
   },
   {
     ...makeProfileInfo({
+      name: 'Shahqaan Qasim',
+      profilePicture: 'https://media.licdn.com/dms/image/C5603AQFoZvaq3AmUUg/profile-displayphoto-shrink_800_800/0?e=1551916800&v=beta&t=ri8uZEuraB1E3RhXYsbxU3lRHX3NFvBYuQRosLQAcjQ',
+      designation: 'VP of Engineering @ Redbuffer',
+      about: `
+        I am accountable for delivering business results. I love building great products 
+        that address user needs and solve critical business problems.
+      `,
+      types: [TYPE.FRONTEND_DEVELOPER],
+      linkedin: "https://www.linkedin.com/in/shahqaan/",
+      email: "shahqaan.qasim+mentoring@gmail.com",
+    }),
+  },
+  {
+    ...makeProfileInfo({
       name: 'Sakhi Mansoor',
       profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-9/48390432_2206216339409799_5015117506335997952_n.jpg?_nc_cat=109&_nc_ht=scontent.flhe7-1.fna&oh=fd9cb650910ccec3513bdf41c032bcbb&oe=5CC96788',
       designation: 'Javascript Rockstar @ Venturedive',
@@ -60,9 +74,6 @@ export default [
         top-tier engineers of JavaScript one day.
       `,
       types: [TYPE.FRONTEND_DEVELOPER],
-      bio: [
-        "Hasn't added bio data yet"
-      ],
       linkedin: "https://www.linkedin.com/in/sakhi-mansoor-742827147/",
       twitter: "https://twitter.com/sakhisheikh",
     }),
