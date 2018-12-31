@@ -18,6 +18,7 @@ import LinkedinIcon from 'mdi-material-ui/LinkedinBox';
 import TwitterIcon from 'mdi-material-ui/TwitterBox';
 import StackOverflowIcon from 'mdi-material-ui/StackOverflow';
 import EmailIcon from 'mdi-material-ui/Email';
+import Githubcon from 'mdi-material-ui/GithubBox';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 // utils
 import { getRandomColor, getFirstLetterOfWords } from '../utils';
@@ -150,18 +151,25 @@ class MentorCard extends React.Component {
                   <EmailIcon />
                 </IconButton>
               )}
-              <IconButton
-                className={classnames(classes.expand, { [classes.expandOpen]: isExpanded })}
-                onClick={this.onToggleExpansion}
-                aria-expanded={isExpanded}
-                aria-label="Show more"
-              >
-                <ExpandMoreIcon />
-              </IconButton>
+              {social.github && (
+                <IconButton component="a" href={social.github} target="_blank" color="secondary">
+                  <Githubcon />
+                </IconButton>
+              )}
+              {bio.length !== 0 && (
+                <IconButton
+                  className={classnames(classes.expand, { [classes.expandOpen]: isExpanded })}
+                  onClick={this.onToggleExpansion}
+                  aria-expanded={isExpanded}
+                  aria-label="Show more"
+                >
+                  <ExpandMoreIcon />
+                </IconButton>
+              )}
             </CardActions>
             <Collapse in={isExpanded} timeout="auto" unmountOnExit>
               <CardContent>
-                <Typography paragraph>Bio:</Typography>
+                <Typography paragraph color="secondary">Bio:</Typography>
                 {bio.map((paragraph, index) => (
                   <Typography key={index} paragraph>
                     {paragraph}
