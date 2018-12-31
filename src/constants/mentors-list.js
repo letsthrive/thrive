@@ -6,7 +6,7 @@ const makeProfileInfo = ({
   designation = '',
   about= '',
   types = [],
-  bio = ["Hasn't added bio data yet"],
+  bio = [],
   linkedin = null,
   twitter = null,
   stackoverflow = null,
@@ -49,6 +49,7 @@ export default [
     twitter: "https://twitter.com/adeelibr",
     stackoverflow: "https://stackoverflow.com/users/story/4921319",
     email: "adeelimranr@gmail.com",
+    github: "https://github.com/adeelibr",
   }),
   makeProfileInfo({
     name: 'Kent C Dodds',
