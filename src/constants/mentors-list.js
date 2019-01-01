@@ -89,6 +89,7 @@ export default [
     ],
     linkedin: "https://www.linkedin.com/in/farooq-ahmad-khan/",
     twitter: "https://twitter.com/farooqkhanOO3",
+    github: "https://github.com/farooqkhan003",
     email: "farooqahmadkhan003@gmail.com",
   }),
   makeProfileInfo({
