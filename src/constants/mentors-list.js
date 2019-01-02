@@ -116,6 +116,24 @@ export default [
     linkedin: "https://www.linkedin.com/in/ayesha-tariq-mahmood-20421020/",
   }),
   makeProfileInfo({
+    name: 'Muhammad Faisal',
+    profilePicture: 'https://media.licdn.com/dms/image/C4D03AQEfWPbD-Gi0oQ/profile-displayphoto-shrink_800_800/0?e=1551916800&v=beta&t=R8crRZQQH2phIuWju8wFW0WYNRWP2_ClKJ4njPSohb8',
+    designation: 'Senior Software Engineer @ b4value.net GmbH',
+    about: `
+      I am a fullstack dev in love with Angular & TypeScript. 
+      I can help You learn basic to advanced Angular/Material concepts. 
+    `,
+    types: [TYPE.FULLSTACK_DEVELOPER],
+    bio: [
+      "Experienced Senior Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Angular (2.x/4.x/5.x), Angular Material 2/5, TypeScript, JavaScript, .Net Core, .Net Framework, Asp.Net MVC, C#, MSSQL Databases, Web Applications Development and Software Development.",
+      "Strong engineering professional with a Master of Science in Software Engineering from University of Tampere, Finland.",
+      "In case you are wondering my favorite editor is VS Code."
+    ],
+    linkedin: "https://www.linkedin.com/in/mohammadfaysal/",
+    twitter: "https://twitter.com/faisssallll",
+    stackoverflow: "https://stackoverflow.com/users/1791913/faisal?tab=profile",
+  }),
+  makeProfileInfo({
     name: 'Farooq Khan',
     profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-1/c54.0.240.240a/p240x240/16142236_1328498327193233_3373289347100569465_n.jpg?_nc_cat=103&_nc_ht=scontent.flhe7-1.fna&oh=53e1f2f9305891abcbbefd10785c4ff6&oe=5C98C65D',
     designation: 'Java Dev @ Venturedive',
