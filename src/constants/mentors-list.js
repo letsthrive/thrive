@@ -124,11 +124,6 @@ export default [
       I can help You learn basic to advanced Angular/Material concepts. 
     `,
     types: [TYPE.FULLSTACK_DEVELOPER],
-    bio: [
-      "Experienced Senior Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Angular (2.x/4.x/5.x), Angular Material 2/5, TypeScript, JavaScript, .Net Core, .Net Framework, Asp.Net MVC, C#, MSSQL Databases, Web Applications Development and Software Development.",
-      "Strong engineering professional with a Master of Science in Software Engineering from University of Tampere, Finland.",
-      "In case you are wondering my favorite editor is VS Code."
-    ],
     linkedin: "https://www.linkedin.com/in/mohammadfaysal/",
     twitter: "https://twitter.com/faisssallll",
     stackoverflow: "https://stackoverflow.com/users/1791913/faisal?tab=profile",
