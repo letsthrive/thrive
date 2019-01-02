@@ -19,6 +19,8 @@ import TwitterIcon from 'mdi-material-ui/TwitterBox';
 import StackOverflowIcon from 'mdi-material-ui/StackOverflow';
 import EmailIcon from 'mdi-material-ui/Email';
 import Githubcon from 'mdi-material-ui/GithubBox';
+import PaperclipIcon from 'mdi-material-ui/Paperclip';
+import FacebookBox from 'mdi-material-ui/FacebookBox';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 // utils
 import { getRandomColor, getFirstLetterOfWords } from '../utils';
@@ -154,6 +156,16 @@ class MentorCard extends React.Component {
               {social.github && (
                 <IconButton component="a" href={social.github} target="_blank" color="secondary">
                   <Githubcon />
+                </IconButton>
+              )}
+              {social.other && (
+                <IconButton component="a" href={social.other} target="_blank" color="secondary">
+                  <PaperclipIcon />
+                </IconButton>
+              )}
+              {social.facebook && (
+                <IconButton component="a" href={social.facebook} target="_blank" color="secondary">
+                  <FacebookBox />
                 </IconButton>
               )}
               {bio.length !== 0 && (
