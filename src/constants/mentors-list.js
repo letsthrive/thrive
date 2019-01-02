@@ -12,6 +12,8 @@ const makeProfileInfo = ({
   stackoverflow = null,
   email = null,
   github = null,
+  other = null,
+  facebook = null,
 }) => {
   return {
     name,
@@ -26,6 +28,8 @@ const makeProfileInfo = ({
       stackoverflow,
       email,
       github,
+      facebook,
+      other,
     })
   }
 }
@@ -103,5 +107,19 @@ export default [
     types: [TYPE.FULLSTACK_DEVELOPER],
     linkedin: "https://www.linkedin.com/in/shahqaan/",
     email: "shahqaan.qasim+mentoring@gmail.com",
+  }),
+  makeProfileInfo({
+    name: "Taley'a Mirza",
+    profilePicture: 'https://pbs.twimg.com/profile_images/1067265320266723328/xPJKSOX-_400x400.jpg',
+    designation: 'Frontend dev @ Sastaticket',
+    about: `
+      Organizer @ ReactKHI. Love to think, code & solve problems. Enjoy learning & 
+      helping others while mentoring and working for the community.
+    `,
+    types: [TYPE.FRONTEND_DEVELOPER],
+    twitter: "https://twitter.com/@taleyamirza",
+    github: "http://gitHub.com/taleymirza",
+    other: "http://slides.com/taleyamirza",
+    facebook: "http://facebook.com/taleyamirza",
   }),
 ];
