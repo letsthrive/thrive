@@ -40,8 +40,8 @@ export default [
     profilePicture: 'https://instagram.flhe7-1.fna.fbcdn.net/vp/388fb254481bc654631ee8da2b6d0395/5CD2461E/t51.2885-19/s320x320/47691569_288218138498359_7897824659771490304_n.jpg?_nc_ht=instagram.flhe7-1.fna.fbcdn.net',
     designation: 'Founder @ Thrive & Fullstack Dev @ Venturedive',
     about: `
-      Hello, I believe a good UX can change people’s lives.. Believe me it can & I 
-      for one can help in making that change.
+      I want to change the world one day & inspire everyone along the way. I love code & I
+      enjoy working on complex problems.
     `,
     types: [TYPE.FULLSTACK_DEVELOPER, TYPE.CONTENT_WRITER],
     bio: [
