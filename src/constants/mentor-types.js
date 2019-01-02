@@ -3,9 +3,9 @@ const mentorTypes = {
   BACKEND_DEVELOPER: 'backend developer',
   FULLSTACK_DEVELOPER: 'fullstack developer',
   CONTENT_WRITER: 'content writer',
-  BUSINESS_ANALYST: 'business analyst',
   ENTREPRENEUR: 'entrepreneur',
   SOLUTIONS_ARCHITECT: 'solutions architect',
+  HUMAN_RESOURCE: 'human resource',
 }
 
 export const isValueInList = (list, value) => {

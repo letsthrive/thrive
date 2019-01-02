@@ -41,6 +41,9 @@ const styles = theme => ({
     flexDirection: 'column',
     flex: 1,
   },
+  cardSubHeader: {
+    minHeight: 40,
+  },
   cardContent: {
     flex: 1,
   },
@@ -114,7 +117,13 @@ class MentorCard extends React.Component {
         <div className={classes.wrapper}>
           {profilePicture === '' ? renderAvatarWords : renderAvatarPicture}
           <Card className={classes.card} raised elevation={4} square>
-            <CardHeader title={name} subheader={designation} />
+            <CardHeader 
+              title={name} 
+              subheader={designation}
+              classes={{
+                subheader: classes.cardSubHeader,
+              }}
+            />
             <CardContent className={classes.cardContent}>
               <Typography paragraph>{about}</Typography>
               {types.map((type, index) => (

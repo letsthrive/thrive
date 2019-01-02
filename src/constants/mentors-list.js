@@ -79,6 +79,43 @@ export default [
     twitter: "https://twitter.com/sakhisheikh",
   }),
   makeProfileInfo({
+    name: "Taley'a Mirza",
+    profilePicture: 'https://pbs.twimg.com/profile_images/1067265320266723328/xPJKSOX-_400x400.jpg',
+    designation: 'Frontend Dev @ Sastaticket & Organizer @ ReactKHI',
+    about: `
+      Creative in nature, Love to think, code & solve problems. 
+      Enjoy learning & helping others while mentoring and working for the community.
+    `,
+    types: [TYPE.FRONTEND_DEVELOPER],
+    twitter: "https://twitter.com/@taleyamirza",
+    github: "http://gitHub.com/taleymirza",
+    other: "http://slides.com/taleyamirza",
+    facebook: "http://facebook.com/taleyamirza",
+  }),
+  makeProfileInfo({
+    name: 'Shahqaan Qasim',
+    profilePicture: 'https://media.licdn.com/dms/image/C5603AQFoZvaq3AmUUg/profile-displayphoto-shrink_800_800/0?e=1551916800&v=beta&t=ri8uZEuraB1E3RhXYsbxU3lRHX3NFvBYuQRosLQAcjQ',
+    designation: 'VP of Engineering @ Redbuffer',
+    about: `
+      I am accountable for delivering business results. I love building great products 
+      that address user needs and solve critical business problems.
+    `,
+    types: [TYPE.FULLSTACK_DEVELOPER],
+    linkedin: "https://www.linkedin.com/in/shahqaan/",
+    email: "shahqaan.qasim+mentoring@gmail.com",
+  }),
+  makeProfileInfo({
+    name: 'Ayesha Tariq Mahmood',
+    profilePicture: 'https://media.licdn.com/dms/image/C4D03AQEQ0Syt2ghZ9g/profile-displayphoto-shrink_800_800/0?e=1551916800&v=beta&t=OefJfj6LnznDS3RqjI-sYHRLvq3gAFmQWlWJE7-06vQ',
+    designation: 'Manager People Operations & Development @ Arbisoft',
+    about: `
+      Experienced People Manager with a demonstrated history of working in the 
+      engineering and tech industry.
+    `,
+    types: [TYPE.HUMAN_RESOURCE],
+    linkedin: "https://www.linkedin.com/in/ayesha-tariq-mahmood-20421020/",
+  }),
+  makeProfileInfo({
     name: 'Farooq Khan',
     profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-1/c54.0.240.240a/p240x240/16142236_1328498327193233_3373289347100569465_n.jpg?_nc_cat=103&_nc_ht=scontent.flhe7-1.fna&oh=53e1f2f9305891abcbbefd10785c4ff6&oe=5C98C65D',
     designation: 'Java Dev @ Venturedive',
@@ -95,31 +132,5 @@ export default [
     twitter: "https://twitter.com/farooqkhanOO3",
     github: "https://github.com/farooqkhan003",
     email: "farooqahmadkhan003@gmail.com",
-  }),
-  makeProfileInfo({
-    name: 'Shahqaan Qasim',
-    profilePicture: 'https://media.licdn.com/dms/image/C5603AQFoZvaq3AmUUg/profile-displayphoto-shrink_800_800/0?e=1551916800&v=beta&t=ri8uZEuraB1E3RhXYsbxU3lRHX3NFvBYuQRosLQAcjQ',
-    designation: 'VP of Engineering @ Redbuffer',
-    about: `
-      I am accountable for delivering business results. I love building great products 
-      that address user needs and solve critical business problems.
-    `,
-    types: [TYPE.FULLSTACK_DEVELOPER],
-    linkedin: "https://www.linkedin.com/in/shahqaan/",
-    email: "shahqaan.qasim+mentoring@gmail.com",
-  }),
-  makeProfileInfo({
-    name: "Taley'a Mirza",
-    profilePicture: 'https://pbs.twimg.com/profile_images/1067265320266723328/xPJKSOX-_400x400.jpg',
-    designation: 'Frontend dev @ Sastaticket',
-    about: `
-      Organizer @ ReactKHI. Love to think, code & solve problems. Enjoy learning & 
-      helping others while mentoring and working for the community.
-    `,
-    types: [TYPE.FRONTEND_DEVELOPER],
-    twitter: "https://twitter.com/@taleyamirza",
-    github: "http://gitHub.com/taleymirza",
-    other: "http://slides.com/taleyamirza",
-    facebook: "http://facebook.com/taleyamirza",
   }),
 ];
