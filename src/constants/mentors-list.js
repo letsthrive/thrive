@@ -67,6 +67,23 @@ export default [
     github: "https://github.com/kentcdodds/ama",
   }),
   makeProfileInfo({
+    name: 'Mashhood Rastgar',
+    profilePicture: 'https://i.imgur.com/Gqx7Fq6.jpg',
+    designation: 'CTO @ Sastaticket.pk',
+    about: `
+      Working on building the best travel platform in Pakistan @Sastaticket. 
+      Full stack dev spending time mostly on React/Python & AWS.
+    `,
+    types: [TYPE.FULLSTACK_DEVELOPER],
+    bio: [
+      "Mashhood leads the engineering team at Sastaticket.pk. He specializes in using the latest web technologies available to develop the best travel platform in the country.",
+      "He is also an active developer community member, is currently serving as a Google Developer Expert and is speaking at several international conferences during the year.",
+    ],
+    facebook: "http://facebook.com/mashhoodr",
+    twitter: "https://twitter.com/mashhoodr",
+    github: "https://github.com/mashhoodr",
+  }),
+  makeProfileInfo({
     name: 'Sakhi Mansoor',
     profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-9/48390432_2206216339409799_5015117506335997952_n.jpg?_nc_cat=109&_nc_ht=scontent.flhe7-1.fna&oh=fd9cb650910ccec3513bdf41c032bcbb&oe=5CC96788',
     designation: 'Javascript Rockstar @ Venturedive',
