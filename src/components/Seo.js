@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+// images
+import homeImage from '../images/home-bg.jpg';
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
@@ -25,6 +27,10 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 property: `og:title`,
                 content: title,
+              },
+              {
+                property: `og:image`,
+                content: homeImage,
               },
               {
                 property: `og:description`,
