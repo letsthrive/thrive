@@ -1,4 +1,20 @@
+// icons
+import LinkedinIcon from 'mdi-material-ui/LinkedinBox';
+import TwitterIcon from 'mdi-material-ui/TwitterBox';
+import SOIcon from 'mdi-material-ui/StackOverflow';
+import EmailIcon from 'mdi-material-ui/Email';
+import Githubcon from 'mdi-material-ui/GithubBox';
+import PaperclipIcon from 'mdi-material-ui/Paperclip';
+import FacebookBox from 'mdi-material-ui/FacebookBox';
+// constants
 import TYPE from './mentor-types';
+
+const getIconInfo = ({ type, url, icon }) => {
+  if (type === 'email') {
+    url = `mailto:${url}?subject=[Thrive] Mentorship Guidance For {Subject}`;
+  }
+  return Object.assign({}, { type, url, icon });
+}
 
 const makeProfileInfo = ({ 
   name = '',
@@ -14,7 +30,7 @@ const makeProfileInfo = ({
   github = null,
   other = null,
   facebook = null,
-}) => {
+} = {}) => {
   return {
     name,
     profilePicture,
@@ -22,15 +38,15 @@ const makeProfileInfo = ({
     about,
     types,
     bio,
-    social: Object.assign({}, {
-      linkedin,
-      twitter,
-      stackoverflow,
-      email,
-      github,
-      facebook,
-      other,
-    })
+    social: [
+      ...(linkedin && getIconInfo({ type: 'linkedin', url: linkedin, icon: LinkedinIcon })),
+      ...(twitter && getIconInfo({ type: 'twitter', url: twitter, icon: TwitterIcon })),
+      ...(stackoverflow &&  getIconInfo({ type: 'stackoverflow', url: stackoverflow, icon: SOIcon })),
+      ...(email && getIconInfo({ type: 'email', url: email, icon: EmailIcon })),
+      ...(github && getIconInfo({ type: 'github', url: github, icon: Githubcon })),
+      ...(facebook && getIconInfo({ type: 'facebook', url: facebook, icon: FacebookBox })),
+      ...(other && getIconInfo({ type: 'other', url: other, icon: PaperclipIcon })),
+    ].filter(Boolean),
   }
 }
 
@@ -162,5 +178,25 @@ export default [
     twitter: "https://twitter.com/farooqkhanOO3",
     github: "https://github.com/farooqkhan003",
     email: "farooqahmadkhan003@gmail.com",
+  }),
+  makeProfileInfo({
+    name: 'Narain Sagar',
+    profilePicture: 'https://avatars0.githubusercontent.com/narainsagar',
+    designation: 'Founder  @ RootedGlobal',
+    about: `
+      Passionate Full-stack developer & consultant spending most of my time with 
+      Web technologies (especially JavaScript/PHP).
+    `,
+    types: [TYPE.FULLSTACK_DEVELOPER, TYPE.ENTREPRENEUR],
+    bio: [
+      "Aloha, I'm Narain! An extraterrestrial full stack developer, community speaker, tech mentor, an opensource enthusiast and a startups consultant passionate about web platform (especially JavaScript). I live in Karachi, Pakistan and pretty much enjoying my life. I've been working with Web (Javascript, Angular, Node.js, Express.js/Koa2, Loopback, PHP, etc) for the last 3+ years.",
+      "I'm a huge fan of test-driven development and maintaining a high standard of code quality by following the market-standards and best-practices. One of my key goals when developing a software is to design it in a way that it's easy to maintain and scale. I've been part of various projects where I've had the range of responsibilities from the development of a user-friendly UI with the help of JavaScript frameworks like Angular/React, well-documented API servers using Node.js including a secure and scalable deployment of web-applications to cloud services like Amazon AWS.",
+      "Moreover, I enjoy speaking in front of a crowd, giving training, mentoring and sharing my knowledge through workshops or presentations at various community events and meetups. In my spare time, I like attending conferences & community events/meetups, watching cinemas, reading, traveling, and visiting new places."
+    ],
+    linkedin: "https://www.linkedin.com/in/narainsagar",
+    twitter: "https://twitter.com/narainsagar",
+    stackoverflow: "https://stackoverflow.com/users/5228251/narainsagar",
+    github: "https://github.com/narainsagar",
+    email: "narainmenghwar@gmail.com",
   }),
 ];
