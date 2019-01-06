@@ -19,7 +19,7 @@ const styles = theme => ({
 
 const Layout = ({ children, classes }) => (
   <>
-    <Header siteTitle={"Thrive"} />
+    <Header siteTitle="Thrive" />
     <div className={classes.body}>
       {children}
     </div>

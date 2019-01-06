@@ -124,7 +124,7 @@ class MentorCard extends React.Component {
                     className={classes.chip} 
                     color="secondary" 
                     label={type} 
-                    variant={isValueInList(selectedList, type) ? "filled" : "outlined"} 
+                    variant={isValueInList(selectedList, type) ? "default" : "outlined"} 
                   />
                 ))}
               </CardContent>
