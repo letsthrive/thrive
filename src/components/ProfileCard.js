@@ -13,21 +13,17 @@ import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Collapse from '@material-ui/core/Collapse';
+// material-ui transitions
+import Zoom from '@material-ui/core/Zoom';
+import Slide from '@material-ui/core/Slide';
 // icons
-import LinkedinIcon from 'mdi-material-ui/LinkedinBox';
-import TwitterIcon from 'mdi-material-ui/TwitterBox';
-import StackOverflowIcon from 'mdi-material-ui/StackOverflow';
-import EmailIcon from 'mdi-material-ui/Email';
-import Githubcon from 'mdi-material-ui/GithubBox';
-import PaperclipIcon from 'mdi-material-ui/Paperclip';
-import FacebookBox from 'mdi-material-ui/FacebookBox';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 // utils
 import { getRandomColor, getFirstLetterOfWords } from '../utils';
 // constants
 import { isValueInList } from '../constants/mentor-types';
 
-const styles = theme => ({
+const styles = ({ spacing, transitions, breakpoints }) => ({
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
@@ -49,25 +45,26 @@ const styles = theme => ({
   },
   profilePicture: {
     zIndex: 1,
-    height: 180,
-    width: 180,
-    borderRadius: '50%',
+    height: 170,
+    width: 170,
+    borderRadius: '15%',
     boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
     fontSize: 60, // if avatar is words
+    backgroundColor: getRandomColor(), // if avatar is words
   },
   chip: {
-    margin: theme.spacing.unit / 2,
+    margin: spacing.unit / 2,
   },
   actions: {
     display: 'flex',
   },
   expand: {
     transform: 'rotate(0deg)',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
+    transition: transitions.create('transform', {
+      duration: transitions.duration.shortest,
     }),
     marginLeft: 'auto',
-    [theme.breakpoints.up('sm')]: {
+    [breakpoints.up('sm')]: {
       marginRight: -8,
     },
   },
@@ -102,103 +99,70 @@ class MentorCard extends React.Component {
     } = this.props;
     const { isExpanded} = this.state;
 
-    const renderAvatarWords = (
-      <Avatar className={classes.profilePicture} style={{ backgroundColor: getRandomColor() }}>
-        {getFirstLetterOfWords(name)}
-      </Avatar>
-    );
-
-    const renderAvatarPicture = (
-      <Avatar alt={name} src={profilePicture} className={classes.profilePicture} />
-    );
-
     return (
       <Grid item xs={12} sm={6} md={3}>
         <div className={classes.wrapper}>
-          {profilePicture === '' ? renderAvatarWords : renderAvatarPicture}
-          <Card className={classes.card} raised elevation={4} square>
-            <CardHeader 
-              title={name} 
-              subheader={designation}
-              classes={{
-                subheader: classes.cardSubHeader,
-              }}
-            />
-            <CardContent className={classes.cardContent}>
-              <Typography paragraph>{about}</Typography>
-              {types.map((type, index) => (
-                <Chip 
-                  key={index} 
-                  className={classes.chip} 
-                  color="secondary" 
-                  label={type} 
-                  variant={isValueInList(selectedList, type) ? "filled" : "outlined"} 
-                />
-              ))}
-            </CardContent>
-            <CardActions className={classes.actions} disableActionSpacing>
-              {social.linkedin && (
-                <IconButton component="a" href={social.linkedin} target="_blank" color="secondary">
-                  <LinkedinIcon />
-                </IconButton>
-              )}
-              {social.twitter && (
-                <IconButton component="a" href={social.twitter} target="_blank" color="secondary">
-                  <TwitterIcon />
-                </IconButton>
-              )}
-              {social.stackoverflow && (
-                <IconButton component="a" href={social.stackoverflow} target="_blank" color="secondary">
-                  <StackOverflowIcon />
-                </IconButton>
-              )}
-              {social.email && (
-                <IconButton 
-                  component="a" 
-                  href={`mailto:${social.email}?subject=[Thrive] Mentorship Guidance For {Subject}`}
-                  target="_blank" 
-                  color="secondary"
-                >
-                  <EmailIcon />
-                </IconButton>
-              )}
-              {social.github && (
-                <IconButton component="a" href={social.github} target="_blank" color="secondary">
-                  <Githubcon />
-                </IconButton>
-              )}
-              {social.other && (
-                <IconButton component="a" href={social.other} target="_blank" color="secondary">
-                  <PaperclipIcon />
-                </IconButton>
-              )}
-              {social.facebook && (
-                <IconButton component="a" href={social.facebook} target="_blank" color="secondary">
-                  <FacebookBox />
-                </IconButton>
-              )}
-              {bio.length !== 0 && (
-                <IconButton
-                  className={classnames(classes.expand, { [classes.expandOpen]: isExpanded })}
-                  onClick={this.onToggleExpansion}
-                  aria-expanded={isExpanded}
-                  aria-label="Show more"
-                >
-                  <ExpandMoreIcon />
-                </IconButton>
-              )}
-            </CardActions>
-            <Collapse in={isExpanded} timeout="auto" unmountOnExit>
-              <CardContent>
-                <Typography paragraph color="secondary">Bio:</Typography>
-                {bio.map((paragraph, index) => (
-                  <Typography key={index} paragraph>
-                    {paragraph}
-                  </Typography>
+          <Zoom in timeout={550}>
+            <Avatar alt={`Mentor ${name}`} src={profilePicture} className={classes.profilePicture}>
+              {getFirstLetterOfWords(name)}
+            </Avatar>
+          </Zoom>
+          <Slide direction="up" in timeout={600} mountOnEnter unmountOnExit>
+            <Card className={classes.card} raised elevation={4} square>
+              <CardHeader 
+                title={name} 
+                subheader={designation}
+                classes={{
+                  subheader: classes.cardSubHeader,
+                }}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography paragraph>{about}</Typography>
+                {types.map((type, index) => (
+                  <Chip 
+                    key={index} 
+                    className={classes.chip} 
+                    color="secondary" 
+                    label={type} 
+                    variant={isValueInList(selectedList, type) ? "filled" : "outlined"} 
+                  />
                 ))}
               </CardContent>
-            </Collapse>
-          </Card>
+              <CardActions className={classes.actions} disableActionSpacing>
+                {social.map(({ type, url, icon: Icon }) => (
+                  <IconButton
+                    key={type}
+                    component="a" 
+                    href={url} 
+                    target="_blank" 
+                    color="secondary"
+                  >
+                    <Icon />
+                  </IconButton>
+                ))}
+                {bio.length !== 0 && (
+                  <IconButton
+                    className={classnames(classes.expand, { [classes.expandOpen]: isExpanded })}
+                    onClick={this.onToggleExpansion}
+                    aria-expanded={isExpanded}
+                    aria-label="Show more"
+                  >
+                    <ExpandMoreIcon />
+                  </IconButton>
+                )}
+              </CardActions>
+              <Collapse in={isExpanded} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph color="secondary">Bio:</Typography>
+                  {bio.map((paragraph, index) => (
+                    <Typography key={index} paragraph>
+                      {paragraph}
+                    </Typography>
+                  ))}
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Slide>
         </div>
       </Grid>
     );
