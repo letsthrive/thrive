@@ -107,7 +107,7 @@ class MentorCard extends React.Component {
               {getFirstLetterOfWords(name)}
             </Avatar>
           </Zoom>
-          <Slide direction="up" in timeout={600} mountOnEnter unmountOnExit>
+          <Slide in direction="up" timeout={800} mountOnEnter unmountOnExit>
             <Card className={classes.card} raised elevation={4} square>
               <CardHeader 
                 title={name} 
