@@ -6,6 +6,7 @@ const mentorTypes = {
   ENTREPRENEUR: 'entrepreneur',
   SOLUTIONS_ARCHITECT: 'solutions architect',
   HUMAN_RESOURCE: 'human resource',
+  DATA_SCIENCE: 'data science',
 }
 
 export const isValueInList = (list, value) => {
