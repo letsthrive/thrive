@@ -16,6 +16,7 @@ const getIconInfo = ({ type, url, icon }) => {
   return Object.assign({}, { type, url, icon });
 }
 
+let mentorId = 0;
 const makeProfileInfo = ({ 
   name = '',
   profilePicture = '',
@@ -31,7 +32,9 @@ const makeProfileInfo = ({
   other = null,
   facebook = null,
 } = {}) => {
+  mentorId++;
   return {
+    mentorId,
     name,
     profilePicture,
     designation,
@@ -160,6 +163,23 @@ export default [
     linkedin: "https://www.linkedin.com/in/mohammadfaysal/",
     twitter: "https://twitter.com/faisssallll",
     stackoverflow: "https://stackoverflow.com/users/1791913/faisal?tab=profile",
+  }),
+  makeProfileInfo({
+    name: 'Javeria Nisar',
+    profilePicture: 'https://pbs.twimg.com/profile_images/990210370865369090/GdD3Hnva_400x400.jpg',
+    designation: 'Software Developer @ Sastaticket.pk',
+    about: `
+      Consistent learner & an active contributor in Python, R, React. 
+      Data Science enthusiast, because I really love maths & statistics with programming.
+    `,
+    types: [TYPE.DATA_SCIENCE, TYPE.FULLSTACK_DEVELOPER],
+    bio: [
+      "Javeria works as a software engineer at Sastaticket.pk , and has an overall experience of almost three years in the software industry. She works around the believe on true impact, and open source contributions helps her fulfil that. She loves reading and discussing ideas with people who think big.",
+      "She believes that communities can resolve problems in Pakistan through tech empowerment. She is currently active with the http://Pakistan.AI  community, and is working on their Data Analysis Certification program as an instructor.",
+    ],
+    linkedin: "https://www.linkedin.com/in/javeria-nisar/",
+    twitter: "https://twitter.com/JavaEria1",
+    github: "https://github.com/JavaEria",
   }),
   makeProfileInfo({
     name: 'Farooq Khan',
