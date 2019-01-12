@@ -139,11 +139,13 @@ class MentorsPage extends React.Component {
         </Grid>
         <Grid container spacing={24}>
           {this.onGetMentorList().length === 0 && <EmptyMentorList />}
-          {this.onGetMentorList().map((mentor, index) => (
+          {this.onGetMentorList().map(mentor => (
             <ProfileCard 
-              key={index}
-              {...mentor}
-              selectedList={selectedList}
+              key={mentor.mentorId}
+              {...{ 
+                ...mentor, 
+                selectedList,
+              }}
             />
           ))}
         </Grid>
