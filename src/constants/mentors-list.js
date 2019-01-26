@@ -115,6 +115,19 @@ export default [
     twitter: "https://twitter.com/sakhisheikh",
   }),
   makeProfileInfo({
+    name: 'Tejas Kumar',
+    profilePicture: 'https://avatars0.githubusercontent.com/u/9947422?s=460&v=4',
+    designation: 'Frontend Dev @ Contiamo',
+    about: `
+      Tejas loves code and loves people. Having started development at a young age, 
+      today Tejas enjoys mentoring developers & serving developer communities everywhere.
+    `,
+    types: [TYPE.FRONTEND_DEVELOPER],
+    twitter: "https://twitter.com/TejasKumar_",
+    email: "tejas@tejas.qa",
+    github: "https://github.com/tejasq",
+  }),
+  makeProfileInfo({
     name: "Taley'a Mirza",
     profilePicture: 'https://pbs.twimg.com/profile_images/1067265320266723328/xPJKSOX-_400x400.jpg',
     designation: 'Frontend Dev @ Sastaticket & Organizer @ ReactKHI',

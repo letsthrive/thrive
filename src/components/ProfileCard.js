@@ -43,6 +43,9 @@ const styles = ({ spacing, transitions, breakpoints }) => ({
   cardContent: {
     flex: 1,
   },
+  cardAboutSection: {
+    minHeight: 80,
+  },
   profilePicture: {
     zIndex: 1,
     height: 170,
@@ -117,7 +120,7 @@ class MentorCard extends React.Component {
                 }}
               />
               <CardContent className={classes.cardContent}>
-                <Typography paragraph>{about}</Typography>
+                <Typography paragraph className={classes.cardAboutSection}>{about}</Typography>
                 {types.map((type, index) => (
                   <Chip 
                     key={index} 
