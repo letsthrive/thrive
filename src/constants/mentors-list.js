@@ -104,7 +104,7 @@ export default [
   }),
   makeProfileInfo({
     name: 'Sakhi Mansoor',
-    profilePicture: 'https://scontent.flhe7-1.fna.fbcdn.net/v/t1.0-9/48390432_2206216339409799_5015117506335997952_n.jpg?_nc_cat=109&_nc_ht=scontent.flhe7-1.fna&oh=fd9cb650910ccec3513bdf41c032bcbb&oe=5CC96788',
+    profilePicture: 'https://avatars2.githubusercontent.com/u/18448824?s=460&v=4',
     designation: 'Javascript Rockstar @ Venturedive',
     about: `
       I see a long but achievable journey to give a talk while standing in front of 
