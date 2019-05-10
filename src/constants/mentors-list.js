@@ -104,7 +104,7 @@ export default [
   }),
   makeProfileInfo({
     name: 'Sakhi Mansoor',
-    profilePicture: 'https://avatars1.githubusercontent.com/u/16651811?s=460&v=4',
+    profilePicture: 'https://avatars2.githubusercontent.com/u/18448824?s=460&v=4',
     designation: 'Javascript Rockstar @ Venturedive',
     about: `
       I see a long but achievable journey to give a talk while standing in front of 
