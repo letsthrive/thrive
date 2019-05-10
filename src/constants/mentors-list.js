@@ -56,7 +56,7 @@ const makeProfileInfo = ({
 export default [
   makeProfileInfo({
     name: 'Adeel Imran',
-    profilePicture: 'https://instagram.flhe7-1.fna.fbcdn.net/vp/388fb254481bc654631ee8da2b6d0395/5CD2461E/t51.2885-19/s320x320/47691569_288218138498359_7897824659771490304_n.jpg?_nc_ht=instagram.flhe7-1.fna.fbcdn.net',
+    profilePicture: 'https://avatars1.githubusercontent.com/u/16651811?s=460&v=4',
     designation: 'Founder @ Thrive & Fullstack Dev @ Venturedive',
     about: `
       I want to change the world one day & inspire everyone along the way. I love code & I
